@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  example_shell:
+    build: .
+    image: example_shell:${EXAMPLE_SHELL_TAG}
+    container_name: example_shell-${EXAMPLE_SHELL_TAG}
+    restart: unless-stopped
+    labels:
+      org.label-schema.group: example_shell
+    env_file:
+      .env
