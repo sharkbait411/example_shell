@@ -100,7 +100,7 @@ crontab_string: 0_20_*_*_5
 - 
 ## Additional information
 - installing docker: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04
-- installing docker-compose: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04
+- installing docker-compose: https://phoenixnap.com/kb/install-docker-compose-on-ubuntu-20-04
     - please use version: 1.29.2 when running the below command
     - using 1.29.2 will allow for the correct docker-compose file version of **'3.8'** to work.
 ```
@@ -113,31 +113,7 @@ $ apt-get install -y make
 ```
 - make sure once this is complete, to add the following file: (and restart the server to update the service json)
 /etc/docker/daemon.json (add your own dns servers to the below list)
-  - currently ["10.199.39.7", "10.199.39.10", "10.226.241.10", "10.226.216.10"] are the dns servers IEO west lab ops uses. This is for Internal Dell purposes.
-  - If you are external Dell, use the alternative deamon.json file example.
-```
-{
-  "debug": true,
-  "live-restore": true,
-  "dns": [
-    "10.199.39.7",
-    "10.199.39.10",
-    "10.226.241.10",
-    "10.226.216.10"
-  ],
-  "log-opts": {
-    "max-size": "8m",
-    "max-file": "8"
-  },
-  "registry-mirrors": [
-    "https://ap-sc.drm.ops.lab.dell.com:8446"
-  ],
-  "insecure-registries": [
-    "ap-sc.drm.ops.lab.dell.com:8446"
-  ]
-}
-```
-  - alternative daemon.json example:
+  - currently ["8.8.8.8", "8.8.4.4"] are the public google dns servers. Please update this list with the DNS servers you wish to use
 ```
 {
   "debug": true,
