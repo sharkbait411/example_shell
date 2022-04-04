@@ -9,6 +9,7 @@ This Shell is an example shell or headless app, to showcase the basic functional
 - The production location is currently loaded in git for example use in development. No vm location given as this is each person's personal development use case
 - The PRIMARY SHELL RUN is highly suggested running from an UBUNTU (20.04 at this current version date) LINUX VM, that uses the following tools:
   - Make, Docker, and Docker-compose.
+  - And the shell location on the vm is: /usr/local/src/<parent shell directory>
   - Please see 'Additional Information' and 'Appendix' for installation instructions and reference documentation
 
 ## Running Shell
